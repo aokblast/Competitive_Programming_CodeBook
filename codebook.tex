@@ -35,63 +35,40 @@
 
 \title{代码簿}
 \begin{document}
-	\maketitle
+\maketitle
 
-	\begin{enumerate}
+\begin{enumerate}
 
-	{\bf \LARGE \item  杂项}
+{\bf \LARGE \item  杂项}
 
 	\begin{itemize}
 
 	{\bf \item  Merge Sort}
-	\begin{lstlisting}[language = C++]
-	int arr[MAXLEN]; // 数组
-	int tmp[MAXLEN]; // 暂存
-	int ans  = 0; // 逆序对
+	
+	\lstinputlisting[language=C++]{./other/MergeSort.cpp}
 
-	void mergeSort(int left, int right){
-		if(left >= right) return;
-		int mid = left + ((right - left) >> 1);
-		mergeSort(left, mid);
-		mergeSort(mid + 1, right);
-		int l = left;
-		int r = mid + 1;
-		int idx = 0;	
-		while(l <= mid && r <= right){		
-			tmp[idx++] = arr[l] <= arr[r] ? arr[l++] 
-			: ((ans += mid - l + 1 /* 逆序对 */ ), arr[r++]);
-		}
-		while(l <= mid){
-			tmp[idx++] = arr[l++];
-		}
-		while(r <= right){
-			tmp[idx++] = arr[r++];
-		}
-		for(int i = 0; i < idx; ++i){
-			arr[left + i] = tmp[i];
-		}
-	}
-\end{lstlisting}
+	{\bf \item  Disjoint Set}
 
-{\bf \item  Disjoint Set}
+	\lstinputlisting[language=C++]{./other/DisjointSet.cpp}
 
-\begin{lstlisting}[language = C++]
-int djs[MAXLEN]; 
-//init for(int i = 0; i < size; ++i)djs[i] = i;
-int find(int id){
-	return djs[id] == id ? id : djs[id] = find(djs[id]);
-}
-bool uSet(int a, int b){
-	int pa = find(a), pb = find(b);
-	return pa == pb ? true : (djs[pa] = pb, false);	
-}
-\end{lstlisting}
-\end{itemize}
+	\end{itemize}
 
-{\bf \LARGE \item  Euler Path}
-\begin{lstlisting}[language = C++]
+{\bf \LARGE \item  图论}
 
-\end{lstlisting}
+
+	\begin{itemize}
+	
+	{\bf \item  Eular Path}	
+	\lstinputlisting[language=C++]{./graph/EularPath.cpp}
+	
+	{\bf \item  多元最短路}
+	\lstinputlisting[language=C++]{./graph/Floyd-Warshal.cpp}	
+	
+	{\bf \item  单元最短路}
+	\lstinputlisting[language=C++]{./graph/Dijkstra.cpp}	
+	\end{itemize}
+
+
 
 
 \end{enumerate}
