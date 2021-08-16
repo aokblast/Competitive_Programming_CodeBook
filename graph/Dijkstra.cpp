@@ -4,8 +4,10 @@ bool visit[MAXLEN];
 
 void dij(int id){
     memset(dis, 0x3f, sizeof(dis));
+    memset(visit, 0, sizeof(visit));
     dis[id] = 0;
     priority_queue<pii, vector<pii>, greater<pii>> q; 
+    
     //first for 目前距离 second for 点
     q.push({0, id});
     while(!q.empty()){
@@ -13,7 +15,7 @@ void dij(int id){
         if(visit[front.second]) continue;
         visit[front.second] = true;
         for(auto adj : adjs[front.second]){
-            if((adj.second + dis[front.second]) <  dis[adj.first]){
+            if((adj.second + dis[front.second]) <  dis[adj.first] || visit[adj.first]){
                 dis[adj.first] = adj.second + dis[front.second];
                 if(visit[adj.first]) continue;
                 q.push({dis[adj.first], adj.first});
