@@ -15,7 +15,7 @@ void dij(int id){
         if(visit[front.second]) continue;
         visit[front.second] = true;
         for(auto adj : adjs[front.second]){
-            if((adj.second + dis[front.second]) <  dis[adj.first] || visit[adj.first]){
+            if((adj.second + dis[front.second]) <  dis[adj.first]){
                 dis[adj.first] = adj.second + dis[front.second];
                 if(visit[adj.first]) continue;
                 q.push({dis[adj.first], adj.first});
