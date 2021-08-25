@@ -38,7 +38,7 @@ long long dfs(int u = s, long long in = 0x3f3f3f3f3f3f3f3f){ //多路增广
         if((depth[adj.to] == (depth[u] + 1)) && adj.val){
             long long dist = dfs(adj.to, min(in, adj.val));
             adj.val -= dist;
-            adjs[adj.to][adj.rev] += dist;
+            adjs[adj.to][adj.rev].val += dist;
             in -= dist;
             out += dist;
         }
