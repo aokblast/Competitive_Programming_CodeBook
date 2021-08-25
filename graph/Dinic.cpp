@@ -35,11 +35,13 @@ long long dfs(int u = s, long long in = 0x3f3f3f3f3f3f3f3f){ //多路增广
     if(in == 0) return 0;
     long long out = 0;
     for(edge &adj : adjs[u]){
-        long long dist = dfs(adj.to, min(in, adj.val));
-        adj.val -= dist;
-        adjs[adj.to][adj.rev] += dist;
-        in -= dist;
-        out += dist;
+        if((depth[adj.to] == (depth[u] + 1)) && adj.val){
+            long long dist = dfs(adj.to, min(in, adj.val));
+            adj.val -= dist;
+            adjs[adj.to][adj.rev] += dist;
+            in -= dist;
+            out += dist;
+        }
     }
     if(!out) depth[u] = 0;
     return out;
