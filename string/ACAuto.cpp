@@ -40,7 +40,10 @@ void query(char* s) {
 	int id = 0;
 	for (int i = 0; s[i]; ++i) {
 		id = trie[id][s[i] - 'a'];
-		//一些懒标操作
+		//一些懒标操作(复杂度较低)
+		for (int j = id; j; j = fail[j]) {
+			//直接操作
+		}
 	}
 }
 
