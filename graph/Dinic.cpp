@@ -11,7 +11,7 @@ int n, m, s, t;
 
 vector<edge> adjs[MAXLEN];
 
-int depth[MAXLEN];
+int depth[MAXLEN]; //深度
 
 bool bfs(){ //分层 + 确定没有回去找
     memset(depth, 0, sizeof(depth)); 

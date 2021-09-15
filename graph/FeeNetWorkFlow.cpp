@@ -1,10 +1,10 @@
-struct edge
+﻿struct edge
 {
     int to;
     int val;
     int rev;
     int cost;
-    edge(int _to, int _val, int _rev, int _cost):to(_to), val(_val), rev(_rev), cost(_cost){}
+    edge(int _to, int _val, int _rev, int _cost):to(_to), val(_val), rev(_rev), cost(_cost){} //反向边的cost要是负数
 };
 
 int n, m, s, t; 
@@ -16,9 +16,9 @@ bool visit[MAXLEN];
 
 
 
-long long zuidaliu = 0, zuixiaofeiyong = 0;
+long long zuidaliu = 0, zuixiaofeiyong = 0; //最大流and最小费用
 
-bool spfa(int id = t){
+bool spfa(int id = t){ //BellMan-Ford
 	memset(visit, 0, sizeof(visit));
 	memset(dis, 0x3f, sizeof(dis));
 	visit[id]  = true;
@@ -34,7 +34,7 @@ bool spfa(int id = t){
 				dis[adj.to] = dis[front] - adj.cost;
 				if(!visit[adj.to]){
 					visit[adj.to] = true;
-					if(!q.empty() && dis[adj.to] < dis[q.front()]) q.push_front(adj.to);
+					if(!q.empty() && dis[adj.to] < dis[q.front()]) q.push_front(adj.to); //SLF优化
 					else q.push_back(adj.to);
 				}
 			}
@@ -44,7 +44,7 @@ bool spfa(int id = t){
 	return dis[s] != 0x3f3f3f3f;
 }
 
-int dfs(int u = s, int flow =  0x3f3f3f3f){
+int dfs(int u = s, int flow =  0x3f3f3f3f){ //多路增广
 	if(u == t){
 		visit[u] = true;
 		return flow;
