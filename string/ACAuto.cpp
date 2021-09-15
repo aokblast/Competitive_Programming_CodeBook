@@ -1,11 +1,11 @@
 int cnt = 0;
 int trie[MAXLEN][26];
 int fail[MAXLEN];
-int rd[MAXLEN];
+int rd[MAXLEN]; //拓扑必须
 char c;
 
 
-void insert(char* s, int i) { //trie插入
+void insert(char* s) { //trie插入
 	int id = 0;
 	for (; *s; ++s) {
 		c = *s - 'a';
@@ -27,7 +27,7 @@ void build() {
 				int t = trie[u][i];
 				fail[t] = trie[fail[u]][i];
 				q.push(t);
-				++rd[fail[t]];
+				++rd[fail[t]]; //拓扑必须
 			}
 			else {
 				trie[u][i] = trie[fail[u]][i];
