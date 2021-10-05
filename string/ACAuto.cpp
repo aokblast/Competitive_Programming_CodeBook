@@ -15,7 +15,7 @@ void insert(char* s) { //trie插入
 	//一些操作(在trie上产生节点)
 }
 
-void build() { 
+void build() {  //记得放在main
 	queue<int> q;
 	for (int i = 0; i < 26; ++i) {
 		if (trie[0][i])q.push(trie[0][i]);
