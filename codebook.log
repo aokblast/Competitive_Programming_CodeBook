@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.8.13)  6 OCT 2021 22:25
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.6) (preloaded format=xelatex 2021.8.13)  23 OCT 2021 02:29
 entering extended mode
 **./codebook.tex
 (codebook.tex
@@ -417,19 +417,19 @@ Package fontspec Info: Font family 'FandolFang-Regular(0)' created for font
 (fontspec)             <->"[FandolFang-Regular.otf]/OT:language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-(other/MergeSort.cpp) (other/DisjointSet.cpp) (graph/EularPath.cpp [1
+(other/vimrc.cpp) (other/MergeSort.cpp) (other/DisjointSet.cpp [1
 
 ])
-(graph/TopoSort.cpp) (graph/Floyd-Warshal.cpp) (graph/Dijkstra.cpp [2])
-(graph/Bellman-Ford.cpp) (graph/mst.cpp [3]) (graph/Dinic.cpp [4])
-(graph/FeeNetWorkFlow.cpp [5]) (dp/IntervalCoverage.cpp) (dp/LIS.cpp)
-(string/KMP.cpp [6]) (string/Manache.cpp) (string/ACAuto.cpp [7])
-(ds/LinkedList.cpp) (ds/ST.cpp) [8] (ds/Fenwick.cpp) [9] (codebook.aux) ) 
+(graph/EularPath.cpp) (graph/TopoSort.cpp) (graph/Floyd-Warshal.cpp [2])
+(graph/Dijkstra.cpp) (graph/Bellman-Ford.cpp) (graph/mst.cpp [3])
+(graph/Dinic.cpp [4]) (graph/FeeNetWorkFlow.cpp [5]) (dp/IntervalCoverage.cpp)
+(dp/LIS.cpp) (string/KMP.cpp [6]) (string/Manache.cpp) (string/ACAuto.cpp
+[7]) (ds/LinkedList.cpp) (ds/ST.cpp [8]) (ds/Fenwick.cpp) [9] (codebook.aux) ) 
 Here is how much of TeX's memory you used:
- 7390 strings out of 411271
- 178889 string characters out of 2827987
- 1219742 words of memory out of 3000000
- 27728 multiletter control sequences out of 15000+600000
+ 7423 strings out of 411271
+ 179198 string characters out of 2827987
+ 1212738 words of memory out of 3000000
+ 27758 multiletter control sequences out of 15000+600000
  406892 words of font info for 59 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  71i,6n,81p,297b,1766s stack positions out of 5000i,500n,10000p,200000b,80000s
