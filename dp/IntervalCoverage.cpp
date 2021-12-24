@@ -10,7 +10,7 @@ int solve(){
     int i = 0;
     while(i < n && r < end){
         if(intv[i].first > r) break;
-        while(intv[i].first <= r  && tmp < end){
+        while(i < n && intv[i].first <= r  && tmp < end){
             tmp = max(intv[i].second, tmp);
             ++i;
         }
