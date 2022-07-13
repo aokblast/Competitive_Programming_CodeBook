@@ -8,7 +8,7 @@ void lcs(){
     lis.push_back(-1);
     for(int i = 0; i < m; ++i){
         char c = s2[i];
-        for(int j = tmp[c].size(); j >= 0; --j  ){
+        for(int j = tmp[c].size() - 1; j >= 0; --j  ){
             if(tmp[c][j] > lis.back()){
                 lis.push_back(tmp[c][j]);
             }else{
