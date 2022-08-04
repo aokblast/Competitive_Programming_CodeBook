@@ -1,5 +1,6 @@
 // ax+by=gcd(a, b) if gcd(a, b) == 1
 // ax同余c(mod b) <=> ax + by = c
+// c 同余 a / b (mod M) = bx 同余 a (mod M)
 
 ll Exgcd(ll a, ll b, ll &x, ll &y){
     if(!b)
