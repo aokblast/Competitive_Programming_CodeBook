@@ -17,7 +17,7 @@ ll Exgcd(ll a, ll b, ll &x, ll &y){
 void inv(){
     inv[1] = 1;
     for(int i = 2; i <= n; ++i)
-	    rev[i] = (ll)(p - p / i) * rev[p % i] % p;
+	    inv[i] = (ll)(p - p / i) * inv[p % i] % p;
 }
 
 
